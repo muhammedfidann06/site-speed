@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Speed</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>⚡ Site Speed</h1>
+      <p class="subtitle">Compare how fast up to three websites respond from your browser.</p>
+    </header>
+
+    <form id="speed-form">
+      <input type="url" class="url" placeholder="https://example.com" required>
+      <input type="url" class="url" placeholder="Second site (optional)">
+      <input type="url" class="url" placeholder="Third site (optional)">
+      <button type="submit" id="run-btn">Run test</button>
+    </form>
+
+    <p id="status" class="status"></p>
+
+    <section id="results" class="results"></section>
+
+    <details class="info">
+      <summary>How is this measured?</summary>
+      <p>
+        Each site is requested 5 times. The first request is a cold start
+        (DNS lookup, TLS handshake). The next four reuse the connection, so
+        they show the server's real response time. Numbers depend on your
+        own network too, so compare sites in the same run.
+      </p>
+    </details>
+  </main>
+
+  <footer>
+    Made by <a href="https://github.com/muhammedfidann06">Muhammed Fidan</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
